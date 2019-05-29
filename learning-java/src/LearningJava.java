@@ -1,61 +1,62 @@
+import java.util.*;
+
 public class LearningJava{
+	static Scanner userInput = new Scanner(System.in);
 	public static void main(String[] args) {
-//		int randomNumber = (int) (Math.random() * 50);
-//		
-//		if(randomNumber < 25) {
-//			System.out.println("The random number is less than 25");
+//		int i = 1;
+//		while(i<=20) {
+//			if(i==3) {
+//				i+=2;
+//				continue;
+//			}
+//			System.out.println(i);
+//			i++;
 //			
-//		}else if(randomNumber > 40) {
-//			System.out.println("The random number is over 40");
-//		}else if(randomNumber == 18) {
-//			System.out.println("The random number is 18");
-//		}else if(randomNumber != 18){
-//			System.out.println("The random number is not 18");
-//		}else {
-//			System.out.println("Nothing worked.");
+//			if(i%2==0) {
+//				i++;
+//			}
+//			
+//			if(i>10) {
+//				break;
+//			}
 //		}
-//		if(!(false)) {
-//			System.out.println("False turned into true.");
+		
+		
+//		double myPi = 4.0;
+//		double j = 3.0;
+//		
+//		while(j<10000000) {
+//			myPi = myPi - (4/j) + (4/(j+2));
+//			j+=4;
+//			System.out.println(myPi);
 //		}
-//		
-//		if((true) && (true)) {
-//			System.out.println("Printed when both sides are true.");
+//		System.out.println("Value of PI : " + Math.PI);
+		
+//		String contYorN = "Y";
+//		int h =1;
+//		while (contYorN.equalsIgnoreCase("y")) {
+//			System.out.println(h);
+//			System.out.print("Continue y or n ? ");
+//			contYorN = userInput.nextLine();
+//			h++;
 //		}
-//		
-//		if((true) ^ (true)) { // Returns true if one is true and one is false
-//			System.out.println("One is true");
+		
+		
+//		int k = 10;
+//		do {
+//			System.out.println(k);
+//			k++;
+//		}while(k < 10);
+		
+		
+//		for(int l = 10;l>=1;l--) {
+//			System.out.println(l);
 //		}
-//		
-//		System.out.println("The random number is " + randomNumber);
 		
 		
-		
-//		int valueOne = 1;
-//		int valueTwo = 2;
-//		
-//		int biggestValue = (valueOne > valueTwo) ? valueOne : valueTwo;
-//		
-//		System.out.println("The biggest number is " + biggestValue);
-		
-		
-		
-		char theGrade = 'B';
-		switch (theGrade) {
-		case 'A':
-			System.out.println("Great job!");
-			break;
-		case 'B':
-			System.out.println("Good job!");
-			break;
-		case 'C':
-			System.out.println("OK");
-			break;
-		case 'D':
-			System.out.println("Bad");
-			break;
-		default:
-			System.out.println("You failed");
-			break;
+		int m, n;
+		for(m=1, n=2;m<=9;m+=2,n+=2) {
+			System.out.println(m + "\n" + n);
 		}
 	}
 }

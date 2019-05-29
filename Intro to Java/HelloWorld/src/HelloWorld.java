@@ -41,12 +41,14 @@ public class HelloWorld {
 		
 		int doubleToInt = (int) bigFloat;
 		
+		int stringToInt = Integer.parseInt(intString);
+		
 		System.out.println(randomChar);
 		System.out.println(anotherChar);
 		System.out.println(andAnotherString);
 		System.out.println(byteString);
 		System.out.println(doubleToInt);
 		
-		
+		// END
 	}
 }

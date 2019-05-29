@@ -1,36 +1,61 @@
-import java.util.Scanner; // This will only import the Scanner from the Java Util library.
-//import java.util.*; // This will import every single thing in the Java Util library.
-
 public class LearningJava{
-	static Scanner userInput = new Scanner(System.in);
 	public static void main(String[] args) {
-		System.out.print("Your favorite number: "); 
-//		Unlike "println", "print" doesn't break the line after the output
+//		int randomNumber = (int) (Math.random() * 50);
+//		
+//		if(randomNumber < 25) {
+//			System.out.println("The random number is less than 25");
+//			
+//		}else if(randomNumber > 40) {
+//			System.out.println("The random number is over 40");
+//		}else if(randomNumber == 18) {
+//			System.out.println("The random number is 18");
+//		}else if(randomNumber != 18){
+//			System.out.println("The random number is not 18");
+//		}else {
+//			System.out.println("Nothing worked.");
+//		}
+//		if(!(false)) {
+//			System.out.println("False turned into true.");
+//		}
+//		
+//		if((true) && (true)) {
+//			System.out.println("Printed when both sides are true.");
+//		}
+//		
+//		if((true) ^ (true)) { // Returns true if one is true and one is false
+//			System.out.println("One is true");
+//		}
+//		
+//		System.out.println("The random number is " + randomNumber);
 		
-		if(userInput.hasNextInt()) { //.hasNextInt() checks if the user's input is an Int or not; Int can be replaced by all data types
-			int numberEntered = userInput.nextInt();
-			System.out.println("You entered is " + numberEntered);
-			
-			int numberEnteredTimes2 = numberEntered * 2;
-			System.out.println("You entered times 2 is " + numberEnteredTimes2);
-			
-			int numberABS = Math.abs(numberEntered);
-			int whichIsBigger = Math.max(6, 7);
-			int whichIsSmaller = Math.min(5, 2);
-			
-			double numSqrt = Math.sqrt(5.23); // Make sure that the sqrt is stored in a double variable
-			
-			int numCeiling = (int) Math.ceil(5.23);
-			int numFlooring = (int) Math.floor(5.23);
-			int numRounding = (int) Math.round(5.23);
-			
-			int randomNumber = (int) (Math.random() * 11);
-			
-			System.out.println(randomNumber);
-			
-			
-		}else {
-			System.out.println("Enter an integer next time.");
+		
+		
+//		int valueOne = 1;
+//		int valueTwo = 2;
+//		
+//		int biggestValue = (valueOne > valueTwo) ? valueOne : valueTwo;
+//		
+//		System.out.println("The biggest number is " + biggestValue);
+		
+		
+		
+		char theGrade = 'B';
+		switch (theGrade) {
+		case 'A':
+			System.out.println("Great job!");
+			break;
+		case 'B':
+			System.out.println("Good job!");
+			break;
+		case 'C':
+			System.out.println("OK");
+			break;
+		case 'D':
+			System.out.println("Bad");
+			break;
+		default:
+			System.out.println("You failed");
+			break;
 		}
 	}
 }

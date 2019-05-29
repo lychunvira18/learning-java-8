@@ -1,6 +1,6 @@
-#### Java Lesson 2 :coffee:
+#### Java Lesson 3 :coffee:
 
-- Importing and using Scanner class from `java.util` library &nbsp; :books:
-- Checking the data type of the inputs of the users &nbsp; :keyboard:
-- Using functions from the `Math` library &nbsp; :triangular_ruler:
-  `Math.abs`,`Math.max`,`Math.min`,`Math.sqrt`,`Math.ceil`,`Math.floor`,`Math.random`
+- `if else` statements &nbsp; :chart_with_upwards_trend:
+- `Conditional` statements &nbsp; :vertical_traffic_light:
+- `Ternary` operator &nbsp; :saxophone:
+- `switch case` &nbsp; :key:

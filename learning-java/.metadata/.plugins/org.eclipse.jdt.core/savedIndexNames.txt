@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+D:\Githubrepo\learning-java-8\learning-java\.metadata\.plugins\org.eclipse.jdt.core

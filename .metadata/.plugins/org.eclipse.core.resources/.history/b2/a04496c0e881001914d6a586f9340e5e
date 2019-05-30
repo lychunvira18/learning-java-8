@@ -1,0 +1,17 @@
+import java.util.Scanner; // This will only import the Scanner from the Java Util library.
+//import java.util.*; // This will import every single thing in the Java Util library.
+
+public class LearningJava{
+	static Scanner userInput = new Scanner(System.in);
+	public static void main(String[] args) {
+		System.out.print("Your favorite number: "); 
+//		Unlike "println", "print" doesn't break the line after the output
+		
+		if(userInput.hasNextInt()) { //.hasNextInt() checks if the user's input is an Int or not; Int can be replaced by all data types
+			int numberEntered = userInput.nextInt();
+			System.out.println("You entered " + numberEntered);
+		}else {
+			System.out.println("Enter an integer next time.");
+		}
+	}
+}

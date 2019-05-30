@@ -1,3 +1,4 @@
-#### Java Lesson 4 :coffee:
+#### Java Lesson 5 :coffee:
 
-- `for while do-while` loops &nbsp; :ferris_wheel:
+- `functions` &nbsp; :wrench:
+- `public` and `private` classes and their scopes &nbsp; :telescope:

@@ -1,62 +1,33 @@
 import java.util.*;
 
 public class LearningJava{
+	
 	static Scanner userInput = new Scanner(System.in);
+	static int randomNumber;
+	
 	public static void main(String[] args) {
-//		int i = 1;
-//		while(i<=20) {
-//			if(i==3) {
-//				i+=2;
-//				continue;
-//			}
-//			System.out.println(i);
-//			i++;
-//			
-//			if(i%2==0) {
-//				i++;
-//			}
-//			
-//			if(i>10) {
-//				break;
-//			}
-//		}
+		System.out.println(getRandomNum());
+		int guessResult = 1;
+		int randomGuess = 0;
 		
-		
-//		double myPi = 4.0;
-//		double j = 3.0;
-//		
-//		while(j<10000000) {
-//			myPi = myPi - (4/j) + (4/(j+2));
-//			j+=4;
-//			System.out.println(myPi);
-//		}
-//		System.out.println("Value of PI : " + Math.PI);
-		
-//		String contYorN = "Y";
-//		int h =1;
-//		while (contYorN.equalsIgnoreCase("y")) {
-//			System.out.println(h);
-//			System.out.print("Continue y or n ? ");
-//			contYorN = userInput.nextLine();
-//			h++;
-//		}
-		
-		
-//		int k = 10;
-//		do {
-//			System.out.println(k);
-//			k++;
-//		}while(k < 10);
-		
-		
-//		for(int l = 10;l>=1;l--) {
-//			System.out.println(l);
-//		}
-		
-		
-		int m, n;
-		for(m=1, n=2;m<=9;m+=2,n+=2) {
-			System.out.println(m + "\n" + n);
+		while (guessResult != -1) {
+			System.out.print("Guess a number between 0 and 50 : ");
+			randomGuess = userInput.nextInt();
+			guessResult = checkGuess(randomGuess);
+		}
+		System.out.println("Yes, the random number is  " + randomNumber + "!");
+	}
+	
+	public static int getRandomNum() {
+		randomNumber = (int) (Math.random() * 51);
+		return randomNumber;
+	}
+	
+	public static int checkGuess(int guess) {
+		if(guess==randomNumber) {
+			return -1;
+		}else {
+			return guess;
 		}
 	}
 }

@@ -1,4 +1,5 @@
-#### Java Lesson 5 :coffee:
+#### Java Lesson 6 :coffee:
 
-- `functions` &nbsp; :wrench:
-- `public` and `private` classes and their scopes &nbsp; :telescope:
+- Common `Exceptions` in Java and how to handle them &nbsp; :gear:
+- `try` and `catch` exceptions &nbsp; :telescope:
+- Basic `I/O` in Java &nbsp; :books:

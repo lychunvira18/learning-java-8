@@ -1,5 +1,3 @@
-#### Java Lesson 7 :coffee:
+#### Java Lesson 8 :coffee:
 
-- Beginning to learn `OOPS` concepts in Java :gear:
-- `getter` and `setter` methods for accessing private variables in Java objects :pencil:
-- `public` and `private` properties of a Java object :stop:
+- Utilizing `classes` and `objects` to create a monster game :alien:

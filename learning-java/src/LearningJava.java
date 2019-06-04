@@ -1,105 +1,80 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
-public class LearningJava {
+public class LearningJava{
 	
 	public static void main(String[] args) {
 		
-		int[] randomArray;
+		ArrayList arrayListOne;
+		arrayListOne = new ArrayList();
 		
-		int[] numberArray = new int[10];
+		ArrayList arrayListTwo = new ArrayList();
 		
-		randomArray = new int[20];
+		ArrayList<String> names = new ArrayList<String>();
 		
-		randomArray[1] = 2;
+		names.add("John Smith");
+		names.add("Mohammed Salami");
+		names.add("Conan O'Brien");
 		
-		String[] stringArray = {"Ugh","this","is"};
+		names.add(2,"Keanu Reeves"); // Adds "Keanu Reeves" at the index 2 of the names ArrayList
 		
-		for(int i = 0; i < numberArray.length ; i++) {
+		names.set(0, "Jamie Smith"); // Replaces the value in the index 0 to "Jamie Smith"
+		
+		names.remove(3); // Removes the value of 'names' ArrayList in the index 3
+		
+//		names.removeRange(0,1); // Removes a range of 0 to 1
+		
+		for (int i = 0; i < names.size(); i++) {
 			
-			numberArray[i] = i;
+			System.out.println(names.get(i));
 			
 		}
 		
-		int k = 1;
-		while(k <= 61) {
-			System.out.print('-');
-			k++;	
-		}
-		System.out.println();
+		System.out.println(names);
 		
-//		for(int j = 0; j < numberArray.length; j++) {
-//			System.out.print("| " + j + " ");
-//		}
-//		System.out.println("| ");
-		
-		String[][] multiArray = new String[10][10];
-		
-		for(int i = 0; i < multiArray.length; i++) {
-			for(int j = 0; j <multiArray[i].length;j++) {
-				
-				multiArray[i][j] = i + " " + j;
-				System.out.print("| " + multiArray[i][j] + " ");
-				
-			}
-			System.out.println("| ");
-
+		for(String rows: names) {
+			
+			System.out.println(rows);
+			
 		}
 		
-		k = 1;
-		while(k <= 61) {
-			System.out.print('-');
-			k++;	
-		}
-		System.out.println();
+		Iterator indivItems = names.iterator();
 		
-		
-//		for(int row : numberArray) {
-//			System.out.print(row);
-//		}
-		
-		
-		for(String[] row: multiArray) {
-			for(String column: row) {
-				System.out.print("| " + column + " ");
-			}
-			System.out.println("| ");
+		while(indivItems.hasNext()) {
+			
+			System.out.println(indivItems.next());
+			
 		}
 		
-		int[] numberCopy = Arrays.copyOf(numberArray, numberArray.length);
 		
-		int[] rangeCopy = Arrays.copyOfRange(numberArray, 3, 6);
+		ArrayList nameCopy = new ArrayList();
+		ArrayList nameBackup = new ArrayList();
 		
-		System.out.println(Arrays.toString(rangeCopy));
+		nameCopy.addAll(names);
 		
-		for(int row: numberCopy) {
-			System.out.print(row);
-			System.out.print(" |");
+		String paulYoung = "Paul Young";
+		
+		names.add(paulYoung);
+		
+		if(names.contains(paulYoung)) {
+			System.out.println("Paul is here");
 		}
 		
-		System.out.println();
-		
-		int[] moreNumbers = new int[100];
-		Arrays.fill(moreNumbers,  2);
-		
-		char[][] boardGame = new char[10][10];
-		
-		for(char[] rows: boardGame) {
-			Arrays.fill(rows,'*');
+		if(names.containsAll(nameCopy)) {
+			System.out.println("Every in nameCopy is in names");
 		}
 		
-		int[] numToSort = new int[10];
+		names.clear();
 		
-		for(int i=0;i<10;i++) {
-			numToSort[i] = (int) (Math.random() * 100);
+		if(names.isEmpty()) {
+			System.out.println("ArrayList is empty!");
 		}
 		
-		Arrays.sort(numToSort);
+		Object[] moreNames = new Object[4];
+		moreNames = nameCopy.toArray();
 		
-		System.out.println(Arrays.toString(numToSort));
-		
-		int whereIs50 = Arrays.binarySearch(numToSort, 50);
-		
-		System.out.println(whereIs50);
+		System.out.println(Arrays.toString(moreNames));
 		
 	}
 	

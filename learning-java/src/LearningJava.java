@@ -1,81 +1,80 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
+import java.util.LinkedList;
 
 public class LearningJava{
 	
 	public static void main(String[] args) {
+	
+		LinkedList linkedListOne = new LinkedList();
 		
-		ArrayList arrayListOne;
-		arrayListOne = new ArrayList();
+		LinkedList<String> names = new LinkedList();
 		
-		ArrayList arrayListTwo = new ArrayList();
+		names.add("SURAN");
+		names.add("Cracker");
 		
-		ArrayList<String> names = new ArrayList<String>();
+		names.addLast("Paul Kim");
 		
-		names.add("John Smith");
-		names.add("Mohammed Salami");
-		names.add("Conan O'Brien");
+		names.addFirst("Eric Nam");
 		
-		names.add(2,"Keanu Reeves"); // Adds "Keanu Reeves" at the index 2 of the names ArrayList
+		names.add(0, "TWICE");
 		
-		names.set(0, "Jamie Smith"); // Replaces the value in the index 0 to "Jamie Smith"
+		names.set(2, "ITZY");
 		
-		names.remove(3); // Removes the value of 'names' ArrayList in the index 3
+		names.remove(4);
 		
-//		names.removeRange(0,1); // Removes a range of 0 to 1
+		names.remove("Eric Nam");
 		
-		for (int i = 0; i < names.size(); i++) {
+		System.out.println("\nFirst Index : " + names.get(0));
+		
+		System.out.println("\nLast Index : " + names.getLast());
+		
+		LinkedList<String> namesCopy = new LinkedList<String>(names);
+		
+		System.out.println("\nFirst Index : " + namesCopy.get(0));
+		
+		System.out.println("\nLast Index : " + namesCopy.getLast());
+		
+		System.out.println();
+		
+		for(String name : names) {
 			
-			System.out.println(names.get(i));
-			
-		}
-		
-		System.out.println(names);
-		
-		for(String rows: names) {
-			
-			System.out.println(rows);
-			
-		}
-		
-		Iterator indivItems = names.iterator();
-		
-		while(indivItems.hasNext()) {
-			
-			System.out.println(indivItems.next());
+			System.out.println(name);
 			
 		}
 		
-		
-		ArrayList nameCopy = new ArrayList();
-		ArrayList nameBackup = new ArrayList();
-		
-		nameCopy.addAll(names);
-		
-		String paulYoung = "Paul Young";
-		
-		names.add(paulYoung);
-		
-		if(names.contains(paulYoung)) {
-			System.out.println("Paul is here");
+		if(names.contains("TWICE")) {
+			System.out.println("\nTWICE is HERE!");
 		}
 		
-		if(names.containsAll(nameCopy)) {
-			System.out.println("Every in nameCopy is in names");
+		if(names.containsAll(namesCopy)) {
+			System.out.println("\nSame music taste!");
 		}
 		
-		names.clear();
+		System.out.println("\nTWICE index at: " + names.indexOf("TWICE"));
 		
-		if(names.isEmpty()) {
-			System.out.println("ArrayList is empty!");
+		System.out.println("\nList Empty ? : " + names.isEmpty());
+		
+		System.out.println("\nList size : " + names.size());
+		
+		System.out.println("\nLook without Error : " + names.peek());
+		
+		System.out.println("\nRemove first element : " + namesCopy.poll());
+		
+		System.out.println("\nRemove last element : " + namesCopy.pollLast());
+		
+		namesCopy.push("TWICE");
+		
+		for(String name : namesCopy) {
+			
+			System.out.println(name);
+			
 		}
 		
-		Object[] moreNames = new Object[4];
-		moreNames = nameCopy.toArray();
+		Object[] nameArray = new Object[4];
 		
-		System.out.println(Arrays.toString(moreNames));
+		nameArray = names.toArray();
 		
+		System.out.println(Arrays.toString(nameArray));
 	}
 	
 }

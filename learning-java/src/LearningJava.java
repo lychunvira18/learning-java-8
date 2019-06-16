@@ -1,80 +1,87 @@
 import java.util.Arrays;
-import java.util.LinkedList;
 
 public class LearningJava{
 	
 	public static void main(String[] args) {
-	
-		LinkedList linkedListOne = new LinkedList();
 		
-		LinkedList<String> names = new LinkedList();
+		String randomString = "I'm a random string";
 		
-		names.add("SURAN");
-		names.add("Cracker");
+		String gotToQuote = "He said,\"I'm here\"";
 		
-		names.addLast("Paul Kim");
+		int numTwo = 2;
 		
-		names.addFirst("Eric Nam");
+		System.out.println(randomString + " " + gotToQuote + " " + numTwo);
 		
-		names.add(0, "TWICE");
+		String uppercaseStr = "BIG";
+		String lowercaseStr = "big";
 		
-		names.set(2, "ITZY");
-		
-		names.remove(4);
-		
-		names.remove("Eric Nam");
-		
-		System.out.println("\nFirst Index : " + names.get(0));
-		
-		System.out.println("\nLast Index : " + names.getLast());
-		
-		LinkedList<String> namesCopy = new LinkedList<String>(names);
-		
-		System.out.println("\nFirst Index : " + namesCopy.get(0));
-		
-		System.out.println("\nLast Index : " + namesCopy.getLast());
-		
-		System.out.println();
-		
-		for(String name : names) {
-			
-			System.out.println(name);
-			
+		if(uppercaseStr.equalsIgnoreCase(lowercaseStr)) {
+			System.out.println("They are equal");
 		}
 		
-		if(names.contains("TWICE")) {
-			System.out.println("\nTWICE is HERE!");
-		}
+		String letters = "abcde";
+		String moreLetters = "fghijk";
 		
-		if(names.containsAll(namesCopy)) {
-			System.out.println("\nSame music taste!");
-		}
+//		System.out.println("2nd char : " + letters.charAt(1));
+//		
+//		System.out.println(letters.compareTo(moreLetters));
+//		
+//		System.out.println(letters.contains("abc"));
+//		
+//		System.out.println(letters.endsWith("de"));
+//		
+//		System.out.println(letters.startsWith("ab"));
+//		
+//		System.out.println(letters.indexOf("cd"));
+//		
+//		System.out.println(letters.indexOf("ab",2));
+//		
+//		System.out.println(letters.lastIndexOf("ab"));
+//		
+//		System.out.println("Length: " + letters.length());
+//		
+//		System.out.println(letters.replace("ab", "zy"));
 		
-		System.out.println("\nTWICE index at: " + names.indexOf("TWICE"));
+//		String[] letterArray = letters.split("");
+//		
+//		System.out.println(Arrays.toString(letterArray));
+//		
+//		char[] charArray = letters.toCharArray();
+//		
+//		System.out.println(Arrays.toString(charArray));
+//		
+//		System.out.println(letters.substring(1,4));
+//		
+//		System.out.println(letters.toUpperCase());
+//		
+//		System.out.println(letters.toLowerCase());
 		
-		System.out.println("\nList Empty ? : " + names.isEmpty());
+		String randString = "    abcde";
 		
-		System.out.println("\nList size : " + names.size());
+		System.out.println(randString.trim());
 		
-		System.out.println("\nLook without Error : " + names.peek());
+		StringBuilder randSB = new StringBuilder("A random value");
 		
-		System.out.println("\nRemove first element : " + namesCopy.poll());
+		System.out.println(randSB.append(" again"));
 		
-		System.out.println("\nRemove last element : " + namesCopy.pollLast());
+		System.out.println(randSB.delete(15, 21));
 		
-		namesCopy.push("TWICE");
+		System.out.println(randSB.capacity());
 		
-		for(String name : namesCopy) {
-			
-			System.out.println(name);
-			
-		}
+		randSB.ensureCapacity(60);
 		
-		Object[] nameArray = new Object[4];
+		System.out.println(randSB.capacity());
 		
-		nameArray = names.toArray();
+		System.out.println(randSB.length());
 		
-		System.out.println(Arrays.toString(nameArray));
+		randSB.trimToSize();
+		
+		System.out.println(randSB.insert(1, "nother"));
+		
+		String oldSB = randSB.toString();
+		
+		
+		
 	}
 	
 }

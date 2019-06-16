@@ -1,20 +1,29 @@
-#### Java Lesson 12 :coffee:
+#### Java Lesson 13 :coffee:
 
-- `LinkedList` manipulation
-- `LinkedList` creation and initialization
-- Utilizing the `java.util.LinkedList` library functions
-  - `add()` : adds element to LinkedList at a specific index
-  - `addLast()` : adds element to the end of LinkedList
-  - `addFirst()` : adds element to the front of LinkedList
-  - `remove()` : removes element at a specific index
-  - `set()` : sets a specific index to the value in specified
-  - `get()` : get element at a specified index
-  - `getLast()` : get element at the end of the LinkedList
-  - `contains()` : checks if LinkedList contains specified element; returns Boolean
-  - `containsAll()` : checks if LinkedList contains elements of specified list; returns Boolean
-  - `indexOf()` : checks index of specified element 
-  - `isEmpty()`: checks if a LinkedList is empty; returns Boolean
-  - `size()` : checks the size of LinkedList
-  - `peek()` : checks for the first element of LinkedList if it is empty without error
-  - `poll()` : removes the first element of LinkedList
-  - `pollLast()` : removes the last element of Linked List
+- `string` manipulation
+  - `string1.equals(string2)` : checks if string1 is equals to string2 with case-sensitivity and returns a _boolean_ value
+  - `string1.equalsIgnoreCase(string2)` : checks if string1 is equals to string2 without case-sensitively and returns a _boolean_ value
+  - `string.charAt(index)` : checks for the char at the specified index
+  - `string1.compareTo(string2)` : compares the strings alphabetically and returns a number based on the alphabet order
+  - `string.contains(content)` : checks if string contains the specified content and returns _boolean_
+  - `string.endsWith(content)` : checks if string ends with specified content and returns _boolean_
+  - `string.startsWith(content)` : checks if string starts with specified content and returns _boolean_
+  - `string.indexOf(content)` : checks for the index of specified content
+  - `string.indexOf(content, index)` : checks for the index of specified content from the index mentioned
+  - `string.lastIndexOf(content)`: checks for the index of content from the end of the index
+  - `string.length()` : checks the length of string
+  - `string.replace(content-to-be-replaced,content)` : replaces the content by another value
+  - `string.split(content)` : splits string into an array of elements by the content specified
+  - `string.toCharArray()` : splits every char in a string into an array
+  - `string.subString(inclusive,exclusive)` : returns at new array inclusive with the first argument and exclusive with the second argument
+  - `string.toUpperCase()` : changes the string to uppercase
+  - `string.toLowerCase()` : changes the string to lowercase
+  - `string.trim()` : removes excessive spaces before and after string
+- `StringBuilder` manipulation
+  - `StringBuilder randomSB = new StringBuilder(content)` : creates a new StringBuilder containing specified content
+  - `randomSB.append(content)` : adds the specified content to the end of the StringBuidler
+  - `randomSB.delete(inclusive,exclusive)` : deletes content at the index inclusive to the first argument and exclusive to the second argument
+  - `randomSB.capacity()` : shows the size that allows for the StringBuilder to contain string
+  - `randomSB.length()` : shows the length of the StringBuilder
+  - `radomSB.trimToSize()` : trims the size of the StringBuilder to the string length
+  - `randomSB.insert(index,content)` : inserts content into the specified index
